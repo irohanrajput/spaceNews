@@ -3,18 +3,19 @@
   line-height: 1.5;
   background-color: #000000;
   text-rendering: optimizeLegibility;
+  color: #ffffff;
 }
 
 a {
-  color: rgb(235, 239, 240);
+  color: rgb(255, 255, 255);
 }
 a:hover {
-  color: #dddce9;
+  color: #646cff;
+  transition-duration: 100ms;
 }
 
 body {
   margin: 0;
-  display: flex;
 }
 
 h1 {

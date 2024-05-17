@@ -1,38 +1,3 @@
-#root {
-  margin: 0 auto;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
 /* for Dashboard */
 
 /* src/components/Dashboard.css */
@@ -45,7 +10,6 @@
   border-radius: 1em;
   box-shadow: 0 0 13em #ffffff22;
   width: 300px;
-  
 }
 
 .tile_box:hover {
@@ -65,10 +29,9 @@
   margin: 0.5em 0;
   color: #bdb9b9;
   max-width: fit-content;
-
 }
 
-.tile_text{
+.tile_text {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -108,7 +71,7 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 0 0 1em 1em;
-  padding: 15px;
+  width: 100%;
 }
 
 .navbar-head {
@@ -123,6 +86,11 @@
   grid-auto-flow: column;
   gap: 1em;
   padding-right: 0.5em;
+  font-weight: 500;
+}
+.nav-el:hover {
+  transform: rotate(5deg);
+  transition-duration: 100ms;
 }
 
 .navbar-links li {
@@ -143,7 +111,7 @@
 .search {
   display: flex;
   gap: 0.3em;
-  padding: 1px;
+  padding-right: 10px;
 }
 
 .searchbox {
@@ -158,4 +126,53 @@
   align-items: center;
   height: 100vh;
   color: aliceblue;
+}
+
+.article-image{
+  float: left;
+  max-width: 60%;
+  margin:0 1em 0 0 ;
+  border-radius: 5px;
+
+}
+
+.article-container{
+  margin: 3em;
+}
+
+.article-container h1{
+  color: #ffffff;
+  border-bottom: solid 1px #ffffff;
+  border-radius: 5px;
+  padding-bottom: 0.5%;
+}
+
+.article-container p{
+  color: #ffffff;
+  font-size: 1.5em;
+  line-height: 1.5;
+  margin: 1em; 
+}
+
+.article-container h4{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #968b8b;
+  font-size: 1em;
+  line-height: 1.3;
+  font-family:monospace ;
+}
+
+.article-container a{
+  color: #1e1d33;
+  text-decoration: underline;
+  background-color: rgb(172, 159, 159);
+  padding: 0.5em;
+  border-radius: 5px;
+  max-width: fit-content;
+  font-weight: 500;
+
+
+
 }

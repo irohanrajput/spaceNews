@@ -5,12 +5,12 @@ import App from "../App";
 const Navbar = () => {
   return (
     <div className="navbar">
-      <div className="navbar-head">SpaceNews </div>
+      <a href="/"><div className="navbar-head">SpaceNews </div></a>
       <ul className="navbar-elements">
-        <li><a href="Home">Home</a> </li>
-        <li><a href="Stories">Stories</a></li>
-        <li><a href="Space">Space </a></li>
-        <li><a href="live-TV">Live TV</a></li>
+        <h2><a  href="/">Home</a> </h2>
+        <h2><a  href="#">Stories</a></h2>
+        <h2><a  href="#">Space </a></h2>
+        <h2><a  href="#">Live TV</a></h2>
       </ul>
 
       <div className="search">
