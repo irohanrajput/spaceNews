@@ -1,15 +1,17 @@
 import React from 'react';
-const ArticleTile = ({ article }) => {
+const ArticleTile = ({ articles }) => {
     return (
         <>
-        <div className="article-tile">
-            <img src={article.imageUrl} alt={article.title} />
-            <div className="article-details">
-                <h2>{article.title}</h2>
-                <p>{article.summary}</p>
-                
-            </div>
-        </div>
+            {articles.map((article) => (
+                <a href = {article.url} className='tile_box'>
+                    <img className="tile_img " src = {article.imageUrl} alt = {article.title} />
+                    <div className="tile_text">
+                    <h2>{article.title}</h2>
+                    
+                    <p>{article.summary.slice(1,300)}</p>
+                    </div>
+                </a>
+            ))}
         </>
     );
 };
