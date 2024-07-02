@@ -6,7 +6,7 @@ const ArticleTile = ({ articles }) => {
     <>
       {articles.map((article) => (
         <Link to={`/article/${article.id}`} key={article.id} className="tile_box">
-          <img className="tile_img " src={article.imageUrl} alt={article.title}/>
+          <img className="tile_img " src={article.image_url} alt={article.title}/>
           <div className="tile_text">
             <h2>{article.title}</h2>
             <p>{article.summary.slice(0, 300)}</p>

@@ -12,9 +12,10 @@ const ArticleView = () => {
   useEffect(() => {
     const fetchArticle = async () => {
       try {
-        const response = await axios.get(`https://api.spaceflightnewsapi.net/v3/articles/${id}`);
+        const response = await axios.get(`https://api.spaceflightnewsapi.net/v4/articles/${id}`);
         setArticle(response.data);
-        setIso(new Date(response.data.publishedAt));
+        setIso(new Date(response.data.published_at));
+        console.log(iso)
       } catch (error) {
         console.error("Error fetching the article:", error);
       } finally {
@@ -33,10 +34,10 @@ const ArticleView = () => {
         article ? (
           <div className='article-container'>
             <h1>{article.title}</h1>
-            <img className='article-image' src={article.imageUrl} alt={article.title} />
+            <img className='article-image' src={article.image_url} alt={article.title} />
             <h4>
-              Source: {article.newsSite} <br />
-              Published On: {iso.toLocaleDateString()} at {iso.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true,  })} <br /> <br />
+              Source: {article.news_site} <br />
+              Published On: {iso.toLocaleDateString()} at {iso.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true,  })}  <br /> <br />
             </h4>
             <p>{article.summary}
             <br /> <br /> 
